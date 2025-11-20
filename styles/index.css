@@ -1,6 +1,7 @@
 .background {
   &.color-black {background-color: black;}
-  &.color-vampire-black {background-color: #0b0b0b;}
+  &.color-chinese_black {background-color: #161616;}
+  &.color-vampire_black {background-color: #0b0b0b;}
 }
 
 
@@ -21,6 +22,7 @@
   &.align {
     &.content-bottom {align-content: end;}
     &.self-bottom {align-self: end;}
+    &.self-top {align-self: start;}
   }
   &.justify {
     &.content-center {justify-content: center;}
@@ -34,5 +36,52 @@
   border: 1px solid white;
   border-radius: 13px 13px 0 0;
   height: 92%;
-  width: 33%;
+  width: 38%;
+  #header {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    #icon {
+      background-color: red;
+      border: thick solid #161616;
+      border-radius: 50%;
+      height: 17.06%;
+      left: 6%;
+      max-height: max-content;
+      max-width: max-content;
+      position: relative;
+      top: -9.5%;
+      #image {
+        border-radius: 50%;
+        max-width: 100%;
+      }
+    }
+    #name {
+      position: relative;
+      top: -9.5%;
+      left: 6%;
+      #display_name {
+        font-size: 175%;
+      }
+      #username {
+        font-size: 100%;
+      }
+    }
+  }
+}
+
+
+#profile_banner {
+  border: 1px solid white;
+  border-radius: inherit;
+  height: 25%;
+  width: 100%;
+}
+
+
+.text {
+  &.color-white {color: white;}
+  &.font-monospace {font-family: monospace;}
+  &.font-sans_serif {font-family: sans-serif;}
+  &.style-bold {font-weight: bold;}
 }
