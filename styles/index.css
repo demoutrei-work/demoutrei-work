@@ -1,0 +1,27 @@
+.background {
+  &.color-black {background-color: black;}
+  &.color-vampire-black {background-color: #050505;}
+}
+
+
+#container {
+  border: 2px solid white;
+  border-radius: 18px;
+  height: 90vh;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 67vw;
+}
+
+
+.flex {
+  display: flex;
+  &.horizontal {
+    &.center {justify-content: center;}
+  }
+  &.vertical {
+    &.center {align-items: center;}
+  }
+}
