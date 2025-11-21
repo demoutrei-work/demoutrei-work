@@ -1,87 +1,158 @@
-.background {
-  &.color-black {background-color: black;}
-  &.color-chinese_black {background-color: #161616;}
-  &.color-vampire_black {background-color: #0b0b0b;}
+:root {
+  --color-charleston-green: #262727;
+  --color-chinese-black: #161616;
+  --color-primary: black;
+  --color-vampire-black: #0b0b0b;
+}
+
+
+body {
+  background-color: var(--color-primary);
+}
+
+
+.card {
+  background-color: var(--color-charleston-green);
+  border-radius: 14px;
+  padding: 3.5%;
+  width: 86%;
+
+  .content {
+    color: white;
+    font-family: arial;
+    font-size: 0.80em;
+    margin-top: 5%;
+  }
+  
+  .title {
+    color: gray;
+    font-family: sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+  }
 }
 
 
 #container {
-  border: 3px solid white;
-  border-radius: 18px;
-  height: 90vh;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  width: 67vw;
-}
-
-
-.flex {
+  align-self: center;
+  background-color: var(--color-vampire-black);
+  border: 2px solid white;
+  border-radius: 13px;
   display: flex;
-  &.align {
-    &.content-bottom {align-content: end;}
-    &.self-bottom {align-self: end;}
-    &.self-top {align-self: start;}
-  }
-  &.justify {
-    &.content-center {justify-content: center;}
-    &.content-evenly {justify-content: space-evenly;}
-    &.self-left {justify-self: start;}
-  }
-}
+  justify-self: center;
+  left: 50%;
+  max-width: max-content;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
+  #profile {
+    background-color: var(--color-chinese-black);
+    border: 1px solid white;
+    border-radius: 13px 13px 0 0;
+    height: 85vh;
+    margin: 10% 10% 0 10%;
+    max-width: 750px;
+    width: 33vw;
 
-#profile {
-  border: 1px solid white;
-  border-radius: 13px 13px 0 0;
-  height: 92%;
-  width: 38%;
-  #header {
-    border-radius: inherit;
-    height: 100%;
-    width: 100%;
-    #icon {
-      background-color: red;
-      border: thick solid #161616;
-      border-radius: 50%;
-      height: 17.06%;
-      left: 6%;
-      max-height: max-content;
-      max-width: max-content;
-      position: relative;
-      top: -9.5%;
-      #image {
+    #header {
+      background-color: inherit;
+      border-radius: inherit;
+      height: 45%;
+      
+      #banner {
+        background-color: var(--color-primary);
+        border-radius: inherit;
+        height: 55%;
+      }
+  
+      #icon {
+        background-color: inherit;
+        border: 0.5em solid var(--color-chinese-black);
         border-radius: 50%;
-        max-width: 100%;
+        display: flex;
+        position: relative;
+        top: -20.5%;
+        left: 6%;
+        width: 22%;
+  
+        #image {
+          border-radius: 50%;
+          max-width: 100%;
+        }
+      }
+
+      #name {
+        color: white;
+        font-family: arial;
+        left: 6%;
+        position: relative;
+        top: -20%;
+        
+        #display-name {
+          font-size: 1.25em;
+          font-weight: bold;
+        }
+
+        #username {
+          font-size: 0.75em;
+        }
       }
     }
-    #name {
-      position: relative;
-      top: -9.5%;
-      left: 6%;
-      #display_name {
-        font-size: 175%;
-      }
-      #username {
-        font-size: 100%;
+
+    #body {
+      display: grid;
+      flex-direction: column;
+      justify-items: center;
+      padding: 3% 0;
+      row-gap: 15%;
+      width: 100%;
+
+      #roles {
+        #items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 0.5em;
+          margin-top: 0.5em;
+          
+          #pithon {
+            .color {
+              background-color: yellow;
+            }
+          }
+  
+          #filipino {
+            .color {
+              background-color: blue;
+            }
+          }
+        }
       }
     }
   }
 }
 
 
-#profile_banner {
-  border: 1px solid white;
-  border-radius: inherit;
-  height: 25%;
-  width: 100%;
-}
+.role {
+  align-items: center;
+  background-color: var(--color-chinese-black);
+  border-radius: 1em;
+  column-gap: 10%;
+  display: flex;
+  flex-direction: row;
+  max-width: max-content;
+  padding: 0.10em 0.60em;
 
+  .color {
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    height: 0.5em;
+    width: 0.9em;
+  }
 
-.text {
-  &.color-white {color: white;}
-  &.font-monospace {font-family: monospace;}
-  &.font-sans_serif {font-family: sans-serif;}
-  &.style-bold {font-weight: bold;}
+  .name {
+    color: white;
+    font-family: monospace;
+  }
 }

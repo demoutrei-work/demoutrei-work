@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet" href = "styles/index.css">
+    <link rel="stylesheet" href="styles/index.css">
     <title>demoutrei-work</title>
   </head>
-  <body class = "background color-black">
-    <div id = "container" class = "flex justify content-evenly background color-vampire_black">
-      <div id = "profile" class = "background color-chinese_black flex align self-bottom">
-        <div id = "header">
-          <div id = "profile_banner" class = "background color-black flex align self-top"></div>
-          <div id = "icon" class = "flex align content-center justify content-center">
-            <img id = "image" src = "https://cdn.discordapp.com/embed/avatars/2.png">
+  <body>
+    <div id="container">
+      <div id="profile">
+        <div id="header">
+          <div id="banner"></div>
+          <div id="icon">
+            <img id="image" src="https://cdn.discordapp.com/embed/avatars/2.png">
           </div>
-          <div id = "name">
-            <span id = "display_name" class = "text color-white font-sans_serif style-bold">demoutrei</span><br>
-            <span id = "username" class = "text color-white font-sans_serif">demoutrei</span>
+          <div id="name">
+            <span id="display-name">demoutrei</span><br>
+            <span id="username">demoutrei</span>
           </div>
         </div>
-        <div id = "body"></div>
+        <div id="body">
+          <div id="about-me" class="card">
+            <span class="title">About Me</span><br>
+            <span class="content">Pithon</span>
+          </div>
+          <div id="roles" class="card">
+            <span class="title">Roles</span>
+            <div id="items">
+              <div id="pithon" class="role">
+                <div class="color"></div>
+                <div class="name">Pithon</div>
+              </div>
+              <div id="filipino" class="role">
+                <div class="color"></div>
+                <div class="name">Filipino</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
