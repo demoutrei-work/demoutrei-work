@@ -1,0 +1,80 @@
+:root {
+  --color-chinese-black: #161616;
+  --color-primary: black;
+  --color-vampire-black: #0b0b0b;
+}
+
+
+body {
+  background-color: var(--color-primary);
+}
+
+
+#container {
+  align-self: center;
+  background-color: var(--color-vampire-black);
+  border: 2px solid white;
+  border-radius: 13px;
+  display: flex;
+  justify-self: center;
+  left: 50%;
+  max-width: max-content;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  #profile {
+    background-color: var(--color-chinese-black);
+    border: 1px solid white;
+    border-radius: 13px 13px 0 0;
+    height: 85vh;
+    margin: 10% 10% 0 10%;
+    max-width: 750px;
+    width: 33vw;
+
+    #header {
+      background-color: inherit;
+      border-radius: inherit;
+      height: 45%;
+      
+      #banner {
+        background-color: var(--color-primary);
+        border-radius: inherit;
+        height: 55%;
+      }
+  
+      #icon {
+        background-color: inherit;
+        border: 0.5em solid var(--color-chinese-black);
+        border-radius: 50%;
+        display: flex;
+        position: relative;
+        top: -20.5%;
+        left: 6%;
+        width: 22%;
+  
+        #image {
+          border-radius: 50%;
+          max-width: 100%;
+        }
+      }
+
+      #name {
+        color: white;
+        font-family: arial;
+        left: 6%;
+        position: relative;
+        top: -20%;
+        
+        #display-name {
+          font-size: 1.25em;
+          font-weight: bold;
+        }
+
+        #username {
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+}
