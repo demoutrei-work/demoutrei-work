@@ -11,37 +11,18 @@ body {
 }
 
 
-.card {
-  background-color: var(--color-charleston-green);
-  border-radius: 14px;
-  padding: 3.5%;
-  width: 86%;
-
-  .content {
-    color: white;
-    font-family: arial;
-    font-size: 0.80em;
-    margin-top: 5%;
-  }
-  
-  .title {
-    color: gray;
-    font-family: sans-serif;
-    font-size: 0.75em;
-    font-weight: bold;
-  }
-}
-
-
 #container {
   align-self: center;
   background-color: var(--color-vampire-black);
   border: 2px solid white;
   border-radius: 13px;
+  column-gap: 4%;
   display: flex;
+  flex-direction: row;
   justify-self: center;
   left: 50%;
   max-width: max-content;
+  padding: 3% 3% 0 3%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -51,9 +32,9 @@ body {
     border: 1px solid white;
     border-radius: 13px 13px 0 0;
     height: 85vh;
-    margin: 10% 10% 0 10%;
     max-width: 750px;
-    width: 33vw;
+    position: relative;
+    width: 28vw;
 
     #header {
       background-color: inherit;
@@ -73,7 +54,7 @@ body {
         display: flex;
         position: relative;
         top: -20.5%;
-        left: 6%;
+        left: 4%;
         width: 22%;
   
         #image {
@@ -85,7 +66,7 @@ body {
       #name {
         color: white;
         font-family: arial;
-        left: 6%;
+        left: 6.5%;
         position: relative;
         top: -20%;
         
@@ -101,12 +82,39 @@ body {
     }
 
     #body {
+      align-content: start;
       display: grid;
       flex-direction: column;
+      height: 53%;
       justify-items: center;
-      padding: 3% 0;
-      row-gap: 15%;
+      overflow-y: auto;
+      padding: 0 0 3% 0;
+      scrollbar-color: var(--color-charleston-green) var(--color-chinese-black);
+      scrollbar-width: none;
+      /* row-gap: 15%; */
       width: 100%;
+
+      .card {
+        /* background-color: var(--color-charleston-green); */
+        background-color: inherit;
+        border-radius: 14px;
+        padding: 3.5%;
+        width: 86%;
+
+        .content {
+          color: white;
+          font-family: arial;
+          font-size: 0.80em;
+          margin-top: 5%;
+        }
+        
+        .title {
+          color: gray;
+          font-family: sans-serif;
+          font-size: 0.75em;
+          font-weight: bold;
+        }
+      }
 
       #roles {
         #items {
@@ -116,43 +124,150 @@ body {
           gap: 0.5em;
           margin-top: 0.5em;
           
+          #filipino {
+            .color {
+              background-color: blue;
+            }
+          }
+          
           #pithon {
             .color {
               background-color: yellow;
             }
           }
-  
-          #filipino {
+
+          .role {
+            align-items: center;
+            background-color: var(--color-chinese-black);
+            border: 0.5px solid white;
+            border-radius: 1em;
+            column-gap: 10%;
+            display: flex;
+            flex-direction: row;
+            max-width: max-content;
+            padding: 0.10em 0.60em;
+
             .color {
-              background-color: blue;
+              border: 1px solid var(--color-primary);
+              border-radius: 50%;
+              height: 0.5em;
+              width: 0.9em;
+            }
+
+            .name {
+              color: white;
+              font-family: monospace;
+            }
+          }
+        }
+      }
+
+      #connections {
+        background-color: inherit;
+        display: grid;
+        flex-direction: column;
+        row-gap: 10%;
+        
+        .connection {
+          display: flex;
+          height: 5vh;
+
+          .icon {
+            align-content: center;
+            background-color: white;
+            border-radius: 25%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            justify-content: center;
+            width: 2em;
+
+            &:hover .tooltip {
+              opacity: 1;
+              visibility: visible;
+            }
+
+            #image {
+              align-self: center;
+              border-radius: 50%;
+              justify-self: center;
+              max-width: 100%;
+              width: 67%;
+            }
+
+            .tooltip {
+              background-color: var(--color-vampire-black);
+              border: 1px solid white;
+              border-radius: 0.45em;
+              color: white;
+              font-family: serif;
+              font-size: 0.75em;
+              left: 50%;
+              opacity: 0;
+              padding: 0.20em 0.45em;
+              position: absolute;
+              text-align: justify;
+              top: -80%;
+              transform: translateX(-50%);
+              vertical-align: middle;
+              visibility: hidden;
+              z-index: 1;
+            }
+          }
+
+          .name {
+            align-self: center;
+            color: white;
+            font-family: arial;
+            font-size: 0.73em;
+            padding: 0 0 0 1em;
+            text-decoration: none;
+            
+            &:hover {
+              text-decoration: underline;
             }
           }
         }
       }
     }
   }
-}
 
+  #other {
+    align-self: end;
+    background-color: inherit;
+    height: 85vh;
+    justify-self: center;
+    display: relative;
+    width: 28vw;
 
-.role {
-  align-items: center;
-  background-color: var(--color-chinese-black);
-  border-radius: 1em;
-  column-gap: 10%;
-  display: flex;
-  flex-direction: row;
-  max-width: max-content;
-  padding: 0.10em 0.60em;
+    #navigation {
+      align-items: center;
+      background-color: inherit;
+      border: solid gray;
+      border-width: 0 0 1px 0;
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+      height: 1.8em;
+      position: sticky;
+      width: 100%;
 
-  .color {
-    border: 1px solid var(--color-primary);
-    border-radius: 50%;
-    height: 0.5em;
-    width: 0.9em;
-  }
-
-  .name {
-    color: white;
-    font-family: monospace;
+      .item {
+        background-color: inherit;
+        border: solid white;
+        border-width: 0 0 0 0;
+        box-shadow: 0;
+        color: white;
+        font-family: monospace;
+        height: 1.8em;
+        padding-bottom: 0.8em;
+        text-decoration: none;
+        
+        &:hover {
+          border-width: 0 0 2px 0;
+        }
+      }
+    }
   }
 }
