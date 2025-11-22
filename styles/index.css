@@ -11,29 +11,6 @@ body {
 }
 
 
-.card {
-  /* background-color: var(--color-charleston-green); */
-  background-color: inherit;
-  border-radius: 14px;
-  padding: 3.5%;
-  width: 86%;
-
-  .content {
-    color: white;
-    font-family: arial;
-    font-size: 0.80em;
-    margin-top: 5%;
-  }
-  
-  .title {
-    color: gray;
-    font-family: sans-serif;
-    font-size: 0.75em;
-    font-weight: bold;
-  }
-}
-
-
 #container {
   align-self: center;
   background-color: var(--color-vampire-black);
@@ -117,6 +94,28 @@ body {
       /* row-gap: 15%; */
       width: 100%;
 
+      .card {
+        /* background-color: var(--color-charleston-green); */
+        background-color: inherit;
+        border-radius: 14px;
+        padding: 3.5%;
+        width: 86%;
+
+        .content {
+          color: white;
+          font-family: arial;
+          font-size: 0.80em;
+          margin-top: 5%;
+        }
+        
+        .title {
+          color: gray;
+          font-family: sans-serif;
+          font-size: 0.75em;
+          font-weight: bold;
+        }
+      }
+
       #roles {
         #items {
           display: flex;
@@ -125,15 +124,39 @@ body {
           gap: 0.5em;
           margin-top: 0.5em;
           
+          #filipino {
+            .color {
+              background-color: blue;
+            }
+          }
+          
           #pithon {
             .color {
               background-color: yellow;
             }
           }
-  
-          #filipino {
+
+          .role {
+            align-items: center;
+            background-color: var(--color-chinese-black);
+            border: 0.5px solid white;
+            border-radius: 1em;
+            column-gap: 10%;
+            display: flex;
+            flex-direction: row;
+            max-width: max-content;
+            padding: 0.10em 0.60em;
+
             .color {
-              background-color: blue;
+              border: 1px solid var(--color-primary);
+              border-radius: 50%;
+              height: 0.5em;
+              width: 0.9em;
+            }
+
+            .name {
+              color: white;
+              font-family: monospace;
             }
           }
         }
@@ -215,41 +238,36 @@ body {
     background-color: inherit;
     height: 85vh;
     justify-self: center;
+    display: relative;
     width: 28vw;
 
     #navigation {
-      #list {
-        list-style: none;
+      align-items: center;
+      background-color: inherit;
+      border: solid gray;
+      border-width: 0 0 1px 0;
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+      height: 1.8em;
+      position: sticky;
+      width: 100%;
 
-        .item {
-          color: white;
+      .item {
+        background-color: inherit;
+        border: solid white;
+        border-width: 0 0 0 0;
+        box-shadow: 0;
+        color: white;
+        font-family: monospace;
+        height: 1.8em;
+        padding-bottom: 0.8em;
+        text-decoration: none;
+        
+        &:hover {
+          border-width: 0 0 2px 0;
         }
       }
     }
-  }
-}
-
-
-.role {
-  align-items: center;
-  background-color: var(--color-chinese-black);
-  border: 0.5px solid white;
-  border-radius: 1em;
-  column-gap: 10%;
-  display: flex;
-  flex-direction: row;
-  max-width: max-content;
-  padding: 0.10em 0.60em;
-
-  .color {
-    border: 1px solid var(--color-primary);
-    border-radius: 50%;
-    height: 0.5em;
-    width: 0.9em;
-  }
-
-  .name {
-    color: white;
-    font-family: monospace;
   }
 }
