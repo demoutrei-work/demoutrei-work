@@ -278,9 +278,9 @@ body {
       display: none;
       flex-direction: column;
       gap: 1em;
-      height: 94.3%;
+      height: 88.1%;
       justify-items: center;
-      margin: 1em 0;
+      padding: 1em 0;
       position: relative;
 
       .card {
