@@ -1,13 +1,14 @@
 const buttons = document.querySelectorAll("[data-display]");
+const displays = document.querySelectorAll(".display");
 
 
 const toggleDisplay = (event) => {
-  buttons.forEach((element) => {
-    console.log(element.id == event.target.id);
-    if (element.id == event.target.id) {
-      element.style.borderWidth = "0 0 2px 0";
+  displays.forEach((element) => {
+    console.log(element.id == event.target.dataset.display);
+    if (element.id == event.target.dataset.display) {
+      element.classList.add("show");
     } else {
-      element.style.borderWidth = "0 0 0 0";
+      element.classList.remove("show");
     }
   })
 }

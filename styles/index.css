@@ -255,18 +255,55 @@ body {
 
       .item {
         background-color: inherit;
-        border: solid white;
-        border-width: 0 0 0 0;
+        border: 0 solid white;
         box-shadow: 0;
         color: white;
+        cursor: pointer;
         font-family: monospace;
         height: 1.8em;
         padding-bottom: 0.8em;
         text-decoration: none;
         
-        &:hover {
-          border-width: 0 0 2px 0;
+        &:hover,
+        &:focus {
+          border-bottom-width: 2px;
         }
+      }
+    }
+
+    .display {
+      align-content: start;
+      background-color: inherit;
+      color: white;
+      display: none;
+      flex-direction: column;
+      gap: 1em;
+      height: 94.3%;
+      justify-items: center;
+      margin: 1em 0;
+      position: relative;
+
+      .card {
+        background-color: var(--color-charleston-green);
+        border: 0.85px solid;
+        border-radius: 0.50em;
+        flex-wrap: wrap;
+        padding: 0.75em;
+        width: 93%;
+
+        .description {
+          font-family: sans-serif;
+          font-size: 0.67em;
+        }
+        
+        .title {
+          font-family: arial;
+          font-weight: bold;
+        }
+      }
+
+      &.show {
+        display: flex;
       }
     }
   }
